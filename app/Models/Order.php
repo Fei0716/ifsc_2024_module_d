@@ -9,6 +9,8 @@ class Order extends Model
 {
     use HasFactory;
 
+    public $fillable = ['status'];
+
     public function company()
     {
         return $this->belongsTo(Company::class);

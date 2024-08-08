@@ -10,4 +10,9 @@ use Laravel\Sanctum\HasApiTokens;
 class Courier extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }
